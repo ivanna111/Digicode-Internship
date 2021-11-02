@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 2. Task 2</title>
+    <meta name="description" content="Web-page structure">
+    <meta name="keywords" content="HTML">
+    <meta name="author" content="Honey Badger">
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="60">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h1>Let's create some nice forms</h1>
+<form action="action_page.php" autocomplete="off"
+      method="get" target="_blank" name="html_quiz">
+    <fieldset>
+        <legend>Персональні дані:</legend>
+        <label for="firstname">Ім'я:*</label><br>
+        <input type="text" id="firstname" name="firstname"
+               required maxlength="20" autofocus autocomplete="on">
+        <br>
+        <label for="lastname">Прізвище:*</label><br>
+        <input type="text" id="lastname" name="lastname"
+               required maxlength="20" autocomplete="on">
+        <br>
+        <label for="email">Email</label><br>
+        <input type="email" name="email" id="email" autocomplete="on" placeholder="myemail@example.com">
+    </fieldset>
+
+    <fieldset>
+        <legend>Тестові питання</legend>
+        <p>Спробуйте відповісти на деякі питання про <abbr title="HyperText Markup Language">HTML:</abbr> </p>
+
+        <p><strong>Питання 1.</strong> &lt;hr&gt; - це порожній елемент HTML</p>
+        <input type="radio" id="q1v1" name="q1" value="v1">
+        <label for="q1v1">Правда</label><br>
+        <input type="radio" id="q1v2" name="q1" value="v2">
+        <label for="q1v1">Хиба</label><br>
+        <input type="radio" id="q1v3" name="q1" value="v3">
+        <label for="q1v1">Залежно від коду, у якому використано</label><br>
+
+        <p><strong>Питання 2.</strong> Оберіть із наведених попрожні теги HTML:</p>
+        <input type="checkbox" id="q2v1" name="q2v1">
+        <label for="q2v1">table</label><br>
+        <input type="checkbox" id="q2v2" name="q2v2">
+        <label for="q2v2">br</label><br>
+        <input type="checkbox" id="q2v3" name="q2v3">
+        <label for="q2v3">strong</label><br>
+
+        <p><strong>Питання 3.</strong> Оберіть символ, з якого починається код введення спецсимволів у HTML:</p>
+        <label for="q3">Оберіть символ:</label><br>
+        <select name="q3" id="q3">
+            <option value="v1">&amp;</option>
+            <option value="v2" selected>$</option>
+            <option value="v3">&apos;</option>
+            <option value="v4">&quot;</option>
+        </select>
+
+        <p><strong>Питання 4.</strong>
+            Який тег дозволяє визначити заголовок сторінки, що буде відображаетись на вкладці браузера?</p>
+        <label for="q4">Оберіть зі списку, або введіть самостійно:</label>
+        <input type="text" mawlength="10" size="50" name="q4" list="tags">
+        <datalist id="tags">
+            <option value="target">target</option>
+            <option value="table">table</option>
+            <option value="name">name</option>
+            <option value="header">header</option>
+        </datalist>
+        <p><strong>Питання 5.</strong>
+            Скільки рівнів заголовків має HTML5?</p><br>
+        <label for="q5">Введіть додатнє ціле число:</label>
+        <input type="number" name="q5" min="1" step="1" id="q5"/>
+
+
+    </fieldset>
+
+    <input type="image" src="submit_button.png">
+</form>
+
+
+
+</body>
+</html>
