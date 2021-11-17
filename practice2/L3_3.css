@@ -1,0 +1,40 @@
+.class1{
+    border-style: solid;
+    border-color: green;
+    border width: 5px;
+}
+.class2{
+    border-top-style: solid;
+    border-top-color: green;
+    border width: 5px;
+}
+.class3{
+    border-style: solid dotted;
+    border-color: green black blue red ;
+    border width: 5px 10px 20px;
+}
+.class4{
+    border: 1px solid;
+    border-radius: 10px;
+    border-top-left-radius: 20px;
+}
+.class5{
+    border: 1px solid;
+    border-radius: 5px;
+    outline-style: solid;
+    outline-width: 10px;
+    outline-color: grey;
+    outline-offset: 10px;
+}
+.class7{
+    border: 1px solid;
+    margin: 20px;
+    padding: 20px;
+    background-color: chocolate;
+}
+.class8{
+    border: 1px solid;
+    margin-top: 50px;
+
+}
+

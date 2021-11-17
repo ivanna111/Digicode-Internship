@@ -1,0 +1,33 @@
+/*::root{
+    font-size: 10px;
+}*/
+body *{
+    background-color: grey;
+}
+.class1{
+    font-size: 12px;
+}
+.class1{
+    font-size: 5mm;
+}
+.class3{
+    font-size: 2rem;
+}
+.class4{
+    font-size: 3rem;
+}
+
+span{
+        font-size: 1.5em;
+    padding: 10px;
+    border: 10px solid green;
+}
+.class5{
+    width: 50%;
+}
+.class6{
+    width: 25vw;
+}
+.class6{
+    width: 50vmax;
+}

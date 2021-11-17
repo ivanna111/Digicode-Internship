@@ -1,0 +1,86 @@
+html{
+    font-family: Arial, serif;
+}
+body{
+    margin: 10px;
+}
+.full-width{
+    display: flex;
+}
+aside div, footer, main article{
+    background-color: rgba(192, 193, 246, 1);
+}
+header{
+    text-align: center;
+    color: black;
+    background-image: url(sky.jpg);
+    padding: 15px 0 0;
+    margin-bottom: 10px;
+}
+.links{
+    background-color: rgba(143, 145, 252, 1);
+    display: flex;
+}
+.links a{
+    display: block;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    text-decoration: none;
+    margin: 0;
+    opacity: 1.0;
+}
+.links a:last-child{
+    margin-left: auto;
+}
+main{
+    flex-basis: 75%;
+    text-align: left;
+    margin-right: 10px;
+}
+main article{
+    padding: 15px;
+    margin-bottom: 10px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+aside{
+    flex-basis: 25%;
+    text-align: left;
+    padding: 0;
+    margin-top: 0;
+}
+aside div{
+    padding: 15px;
+    margin-bottom: 10px;
+}
+footer{
+    text-align: center;
+    padding: 15px 0;
+}
+@media only screen and (max-width: 800px){
+    .full-width{
+        flex-wrap: wrap;
+    }
+    main{
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+    aside{
+        display: flex;
+        flex-basis: 100%;
+    }
+    aside div{
+        flex: 1 1 30%;
+    }
+}
+@media only screen and (max-width: 425px){
+    .full-width{
+        flex-wrap: wrap;
+    }
+    aside{
+        display: block;
+    }
+}

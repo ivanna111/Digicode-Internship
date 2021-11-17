@@ -1,0 +1,80 @@
+.class1{
+    background-color: yellow;
+}
+#main-nav{
+    background-color: lightblue;
+}
+li{
+    margin: 10px;
+}
+*{
+    color: gray;
+}
+p.class1{
+    text-transform: uppercase;
+}
+.class1.class2{
+    text-decoration: none;
+}
+
+.class3 .class1{
+    font-size: 20px;
+}
+header p{
+    font-family:Arial, Helvetica, sans-serif
+}
+aside > a{
+    font-size: 10px;
+}
+
+li, label{
+    border: 1px solid;
+}
+[href]{
+    padding: 15px;
+}
+[target=_blank]{
+    background-color: blueviolet;
+}
+label:hover{
+    background-color: green;
+}
+/* Comment */
+
+a:active{
+    color: red;
+}
+a:visited{
+    color: red;
+}
+a:link{
+    color: green;
+}
+input:focus{
+    border: 5px solid black;
+}
+input:valid{
+    background-color: chocolate;
+}
+
+p::first-letter{
+    font-size: 25px;
+}
+p::first-line{
+    font-size: 25px;
+}
+aside::before{
+    content: Test TestTestTestTest;
+}
+aside::after {
+    content: Test TestTestTestTest;
+}
+::marker{
+    color: blue;
+}
+::placeholder{
+    font-size: 8px;
+}
+::selection{
+    background-color: white;
+}

@@ -1,0 +1,95 @@
+body{
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+.full-width{
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+}
+header{
+    text-align: center;
+    color: white;
+    background-image: url(header_background.png);
+    padding: 15px;
+}
+nav{
+    flex-basis: 20%;
+    text-align: center;
+}
+main{
+    flex-basis: 60%;
+    text-align: center;
+    padding: 0px 20px;
+}
+aside{
+    flex-basis: 20%;
+    text-align: center;
+    background-color: darkgrey;
+    padding: 8px;
+    margin-top: 8px;
+}
+nav a{
+    text-decoration: none;
+    display: block;
+    background-color: lightgray;
+    padding: 8px;
+    margin-top: 8px;
+    color: black;
+}
+.drop-button{
+    background-color: lightgray;
+    padding: 8px;
+    margin-top: 8px;
+    color: black;
+    border: none;
+    width: 100%;
+    display: none;
+
+}
+nav a:hover{
+background-color: darkgray
+}
+article p, aside p {
+    color: rgb(21, 16, 51);
+}
+footer{
+    background-color: lightgray;
+    text-align: center;
+    padding: 10px;
+    margin-top: 8px;
+}
+@media screen and (max-width:768px){
+    aside{
+        flex-basis: 100%;
+    }
+    main{
+        flex-basis: 80%;
+    }
+}
+@media screen and (max-width:425px){
+    aside, main, nav{
+        flex-basis: 100%;
+    }
+    .drop-button{
+    display: block;
+    }
+    .drop-content{
+    display: none;
+    }
+    nav:hover .drop-content{
+        display: block;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        box-shadow: 0px 10px 15px 0px black;
+    }
+    nav:hover .drop-button{
+        background-color: darkgray
+    }
+
+}
+

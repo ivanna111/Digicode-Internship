@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Publishing house">
+    <meta name="keywords" content="publishing, store, видавництво, Жупанського, Жупанський, ">
+    <meta name="author" content="Smorodskaya Ivanna">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 2</title>
+</head>
+<body>
+<header>
+    <div id="login_header"><a href="#">УВІЙТИ</a></div>
+    <div id="search">
+        <form action="action_page.php" autocomplete="off"
+              method="get" target="_blank" name="html_quiz">
+
+            <label for="gsearch"></label>
+            <input type="search" id="gsearch" name="gsearch" autocomplete="on" placeholder="Пошук">
+
+            <input type="image" src="search_button.jpg" alt="search button">
+
+        </form>
+    </div>
+
+    <div id="logo">
+        <a href="https://publisher.in.ua/"><img src="logo.jpg" alt="logo"></a>
+    </div>
+
+    <div id="cart"><a href="#">Кошик: 3 товари <span class="">530 грн.</span></a></div>
+
+    <div id="menu">
+        <a href="#">ГОЛОВНА</a>
+        <a href="#">ПРО ВИДАВНИЦТВО</a>
+        <a href="#">НАШІ КНИГИ</a>
+        <a href="#">Е-КНИГИ</a>
+        <a href="#">КОМПЛЕКТИ</a>
+        <a href="#">РОЗПРОДАЖ</a>
+        <a href="#">ФУТБОЛКИ/ТОРБИНКИ</a>
+        <a href="#">КОНТАКТИ</a>
+        <a href="#">ІНФОРМАЦІЯ ДЛЯ ЗАМОВЛЕНЬ</a>
+    </div>
+</header>
+
+<main>
+    <div id="login_main">Ви постійний покупець? <a href="#"><span>Щоб увійти, клацність сюди</span></a></div>
+    <div id="coupon">Є КУПОН? <a href="#"><span class="">НАТИСНІТЬ ТУТ, ЩОБ ВВЕСТИ КОД</span></a></div>
+
+    <form action="action_page.php" autocomplete="off"
+          method="post" target="_blank" name="html_quiz">
+        <h2>Оплата і Доставка</h2>
+        <label for="firstname">Ім'я<span title="обов'язкове поле">*</span></label><br>
+        <input type="text" id="firstname" name="firstname"
+               required maxlength="20" autofocus autocomplete="nope"><br>
+        <label for="lastname">Прізвище<span title="обов'язкове поле">*</span></label><br>
+        <input type="text" id="lastname" name="lastname"
+               required maxlength="20" autocomplete="nope"><br>
+        <label for="company">Компанія (організація)</label><br>
+        <input type="text" size="50" id="company" name="company" autocomplete="nope"><br>
+        <label for="email">E-mail<span title="обов'язкове поле">*</span></label><br>
+        <input type="email" name="email" id="email" required autocomplete="on"><br>
+        <label for="phone">Телефон<span title="обов'язкове поле">*</span></label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required autocomplete="on"><br>
+        <label for="delivery_type">Спосіб доставки<span title="обов'язкове поле">*</span></label><br>
+        <select name="delivery_type" id="delivery_type" required>
+            <option value="post" selected>Нова пошта</option>
+            <option value="self">Самовивіз</option>
+        </select><br>
+        <label for="address">Адреса</label><br>
+        <input id="address" list="addresses" name="address" placeholder="Населений пункт" autocomplete="nope">
+        <datalist id="addresses">
+            <option value="Київ"></option>
+            <option value="Харків"></option>
+            <option value="Полтава"></option>
+        </datalist>
+        <br>
+        <label for="number">Номер/відділення складу Нової Пошти</label><br>
+        <input type="number" name="number" min="1" step="1" id="number"/><br>
+        <input type="checkbox" id="check" name="check" value="yes">
+        <label for="check">Створити профіль?</label><br>
+
+        <hr>
+
+        <h2>Ваше замовлення</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Товар</th>
+                <th>Всього</th>
+            </tr>
+            </thead>
+            <tfoot>
+            <td>Сума замовлення</td>
+            <td>530 грн.</td>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td>Бірманські будні &#215; 1</td>
+                <td>150 грн.</td>
+            </tr>
+            <tr>
+                <td>Хрестоносці &#215; 1</td>
+                <td>230 грн.</td>
+            </tr>
+            <tr>
+                <td>Бірманські будні &#215; 1</td>
+                <td>150 грн.</td>
+            </tr>
+            <tr>
+                <td>Підсумок</td>
+                <td>530 грн.</td>
+            </tr>
+            </tbody>
+
+        </table>
+        <input type="radio" id="afterpayment" name="payment" value="afterpayment">
+        <label for="afterpayment">Післяоплата</label><br>
+        <p>Оплата на пошті при отриманні замовлення</p><br>
+        <input type="radio" id="card" name="payment" value="card">
+        <label for="card">Оплата кредитною картою</label><br>
+        <input type="submit" value="ОФОРМИТИ ЗАМОВЛЕННЯ">
+    </form>
+</main>
+
+<p>
+    Термін виконання замовлення - до 10 робочих днів.<br>
+    Вартість поштових послуг сплачується на поштовому відділенні при отриманні замовлення.<br><br>
+    * УВАГА! Просимо враховувати, що за послугу післяплати поштові оператори стягують додаткову комісію:
+    наприклад, вартість даної послуги &#171;Нової поштит&#187; з опцією оплати при отриманні замовлення у відділенні
+    становить 20 грн + 2% від суми грошового переказу.<br><br>
+    Після надходження на відділення Нової пошти, замовлення зберігається там три дні.
+    Якщо клієнт протягом цього часу його не забирає, замовлення автоматично повертається на склад виробництва.
+    Повторне надсилання замовлення можливе лише за умови сплати додаткової вартості кур'єрських послуг.
+</p>
+
+</body>
+
+<footer>
+    <p>&#169; 2016-2021, Видавництво Жупанського</p>
+    <p><a href="https://publisher.in.ua/vidshkoduvannya-ta-povernennya/">Політика відшкодування та повернення</a></p>
+    <p><a href="https://www.facebook.com/zhupansky.publisher">Facebook-спільнота</a></p>
+    <p><a href="https://kolodiy.info/ua/">Розробка сайту</a> - Kolodiy info</p>
+    <a href="https://"><img src="zs_banner.gif" alt="banner west east"></a>
+</footer>
+
+</html>

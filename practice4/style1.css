@@ -1,0 +1,142 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    font-family: Garamond, sans-serif;
+}
+header *{
+    display: inline;
+}
+header{
+    background-color: white;
+    color: grey;
+    position:fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 0 3%;
+    box-shadow: 0 2px 10px 3px rgba(66, 66, 66);
+}
+header a{
+    text-decoration: none;
+    color: rgb(100, 100, 100);
+}
+nav a{
+    text-transform: uppercase;
+    padding: 2px 0.5em;
+    border-radius: 1em;
+    text-shadow: white 0 1px 3px;
+}
+nav a:hover{
+    background-color: grey;
+    color: white;
+}
+.fas, .fab{
+    font-size: 1.5em;
+}
+.fas:hover, .fab:hover{
+    color: black;
+}
+.fab{
+    margin: 0 5px;
+}
+.fas{
+    padding-right: 10px;
+}
+
+h1{
+    font-size: 20px;
+    display: inline;
+    border-left: grey 1px solid;
+    padding-left: 10px;
+}
+.social-links{
+    margin-left: auto;
+}
+nav ul{
+    display:flex;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width:820px) {
+    header nav{
+        order: 4;
+        flex-basis: 100%;
+    }
+    nav ul{
+        margin: 0;
+        padding-bottom: 5px;
+        padding-left: 0;
+        justify-content: space-around;
+    }
+}
+@media screen and (max-width:500px) {
+    nav a{
+        font-size: 0.8em;
+    }
+    .fas, .fab, h1{
+        font-size: 1em;
+    }
+    h2.edge{
+        font-size: 1em;
+    }
+}
+@media screen and (max-width:345px){
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    nav li{
+        flex-basis: 33%;
+        text-align: center;
+    }
+}
+
+
+
+.back-img1{
+    background-image: url("mountains.jpg");
+    min-height: 100%;
+}
+.back-img2{
+    background-image: url("forest.jpg");
+    min-height: 500px;
+}
+.back-img3{
+    background-image: url("branch.jpg");
+    min-height: 500px;
+}
+section{
+    text-align: center;
+    padding: 45px 10%;
+}
+.dark{
+    background-color: rgb(29, 29, 29);
+    color: white;
+}
+.light p{
+    color: rgb(29, 29, 29);
+}
+.light h3{
+    text-transform: uppercase;
+}
+h2.edge{
+    text-transform: uppercase;
+    background-color: gray;
+    color: white;
+    font-weight: normal;
+    letter-spacing: 10px;
+    padding: 20px;
+}
+[class*="back-img"]{
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

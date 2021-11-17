@@ -25,6 +25,8 @@
         <input type="text" id="lastname" name="lastname"
                required maxlength="20" autocomplete="on">
         <br>
+        <label for="datef">Дата народження:</label><br>
+        <input type="date" id="datef" name="datef" min="1930-01-01" max="2021-10-01"><br>
         <label for="email">Email</label><br>
         <input type="email" name="email" id="email" autocomplete="on" placeholder="myemail@example.com">
     </fieldset>
@@ -61,7 +63,7 @@
         <p><strong>Питання 4.</strong>
             Який тег дозволяє визначити заголовок сторінки, що буде відображаетись на вкладці браузера?</p>
         <label for="q4">Оберіть зі списку, або введіть самостійно:</label>
-        <input type="text" mawlength="10" size="50" name="q4" list="tags">
+        <input type="text" maxlength="10" size="50" name="q4" list="tags" id="q4">
         <datalist id="tags">
             <option value="target">target</option>
             <option value="table">table</option>
@@ -72,6 +74,10 @@
             Скільки рівнів заголовків має HTML5?</p><br>
         <label for="q5">Введіть додатнє ціле число:</label>
         <input type="number" name="q5" min="1" step="1" id="q5"/>
+        <p><strong>Питання 6.</strong>
+            Згадайте якомога більше тегів, що слугують форматуванню тексту. </p><br>
+        <textarea name="q6" rows="3" cols="18"></textarea>
+
 
 
     </fieldset>
