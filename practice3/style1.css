@@ -9,9 +9,9 @@ table{
 }
 @media screen and (max-width:900px){
 table{
-    float: none;
-    width: 96%;
-    }
+         float: none;
+         width: 96%;
+     }
 }
 th, td{
     border: 1px solid yellow;

@@ -12,115 +12,238 @@
 </head>
 <body>
 <header>
-    <div id="login_header"><i class="fas fa-sign-in-alt"></i><a href="#">УВІЙТИ</a></div>
-    <div class="box">    <div id="search">
-        <form action="action_page.php" autocomplete="off"
-              method="get" target="_blank" name="searchbutton">
-            <div id="searchbutton">
-            <label for="gsearch"></label>
-            <input type="search" id="gsearch" name="gsearch" autocomplete="on" placeholder="Пошук">
+    <div id="login_header"><i class="fas fa-sign-in-alt"></i>
+        <a href="#">УВІЙТИ</a>
+    </div>
+    <div class="box">
+        <div id="search">
+            <form action="action_page.php" autocomplete="off"
+                  method="get" target="_blank" name="searchbutton">
+                <div class="search-box">
+                    <input type="search" id="gsearch" name="gsearch" class="search-button" autocomplete="on"
+                           placeholder="Пошук">
+                    <input class="search-glass" type="image" src="search_button.jpg" alt="search button">
+                </div>
+            </form>
+        </div>
 
-            <input type="image" src="search_button.jpg" alt="search button">
-            </div>
-        </form>
+        <div id="logo">
+            <a href="https://publisher.in.ua/"><img src="logo.jpg" alt="logo"></a>
+        </div>
+
+        <div id="cart">
+            <a href="#"><i class="fas fa-shopping-bag"></i>
+                <span class="basket"> Кошик:</span><span class="basket-amount"> 3 товари</span> <span
+                        class="money">530 грн.</span></a>
+        </div>
     </div>
 
-    <div id="logo">
-        <a href="https://publisher.in.ua/"><img src="logo.jpg" alt="logo"></a>
-    </div>
-
-    <div id="cart"><a href="#">Кошик: 3 товари <span class="">530 грн.</span></a></div>
-    </div>
-    <nav id="menu">
-        <a href="#">ГОЛОВНА</a>
-        <a href="#">ПРО ВИДАВНИЦТВО</a>
-        <a href="#">НАШІ КНИГИ</a>
-        <a href="#">Е-КНИГИ</a>
-        <a href="#">КОМПЛЕКТИ</a>
-        <a href="#">РОЗПРОДАЖ</a>
-        <a href="#">ФУТБОЛКИ/ТОРБИНКИ</a>
-        <a href="#">КОНТАКТИ</a>
-        <a href="#">ІНФОРМАЦІЯ ДЛЯ ЗАМОВЛЕНЬ</a>
+    <button class="menu-button">
+        <a href="#"><i class="fas fa-bars"></i></a>
+    </button>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="#">ГОЛОВНА</a>
+            </li>
+            <li>
+                <a href="#">ПРО ВИДАВНИЦТВО</a>
+                <ul>
+                    <li>
+                        <a href="#">АВТОРИ</a>
+                    </li>
+                    <li>
+                        <a href="#">КНИГАРНІ</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">НАШІ КНИГИ</a>
+                <ul>
+                    <li>
+                        <a href="#">ЛАУРЕАТИ НОБЕЛІВСЬКОЇ ПРЕМІЇ</a>
+                    </li>
+                    <li>
+                        <a href="#">МАЙСТРИ СВІТОВОЇ ПРОЗИ</a>
+                    </li>
+                    <li>
+                        <a href="#">МАЙСТРИ ГОТИЧНОЇ ПРОЗИ</a>
+                    </li>
+                    <li>
+                        <a href="#">AD ASTRA</a>
+                    </li>
+                    <li>
+                        <a href="#">АМАЛЬГАМА</a>
+                    </li>
+                    <li>
+                        <a href="#">NONFICTION</a>
+                    </li>
+                    <li>
+                        <a href="#">ЖИТТЄПИСИ</a>
+                    </li>
+                    <li>
+                        <a href="#">ЗАРУБІЖНА ЛІТЕРАТУРА</a>
+                    </li>
+                    <li>
+                        <a href="#">АЛЬТЕРНАТИВА</a>
+                    </li>
+                    <li>
+                        <a href="#">НАУКОВА ЛІТЕРАТУРА</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Е-КНИГИ</a>
+            </li>
+            <li>
+                <a href="#">КОМПЛЕКТИ</a>
+            </li>
+            <li>
+                <a href="#">РОЗПРОДАЖ</a>
+                <ul>
+                    <li>
+                        <a href="#">ДИТЯЧА ЛІТЕРАТУРА</a>
+                    </li>
+                    <li>
+                        <a href="#">УКРАЇНСЬКА ЛІТЕРАТУРА</a>
+                    </li>
+                    <li>
+                        <a href="#">ПОЕЗІЯ</a>
+                    </li>
+                    <li>
+                        <a href="#">ІНШЕ</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">ФУТБОЛКИ/ТОРБИНКИ</a>
+            </li>
+            <li>
+                <a href="#">КОНТАКТИ</a>
+            </li>
+            <li>
+                <a href="#">ІНФОРМАЦІЯ ДЛЯ ЗАМОВЛЕНЬ</a>
+            </li>
+            <ul>
     </nav>
+    <div class="line">
+        <hr>
+    </div>
 </header>
 
 <main>
-    <div id="login_main">Ви постійний покупець? <a href="#"><span>Щоб увійти, клацність сюди</span></a></div>
-    <div id="coupon">Є КУПОН? <a href="#"><span class="">НАТИСНІТЬ ТУТ, ЩОБ ВВЕСТИ КОД</span></a></div>
-
     <form action="action_page.php" autocomplete="off"
-          method="post" target="_blank" name="inputs">
-        <h2 id="inputs">Оплата і Доставка</h2>
-        <label for="firstname">Ім'я<span title="обов'язкове поле">*</span></label><br>
-        <input type="text" id="firstname" name="firstname"
-               required maxlength="20" autofocus autocomplete="nope"><br>
-        <label for="lastname">Прізвище<span title="обов'язкове поле">*</span></label><br>
-        <input type="text" id="lastname" name="lastname"
-               required maxlength="20" autocomplete="nope"><br>
-        <label for="company">Компанія (організація)</label><br>
-        <input type="text" size="50" id="company" name="company" autocomplete="nope"><br>
-        <label for="email">E-mail<span title="обов'язкове поле">*</span></label><br>
-        <input type="email" name="email" id="email" required autocomplete="on"><br>
-        <label for="phone">Телефон<span title="обов'язкове поле">*</span></label><br>
-        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required autocomplete="on"><br>
-        <label for="delivery_type">Спосіб доставки<span title="обов'язкове поле">*</span></label><br>
-        <select name="delivery_type" id="delivery_type" required>
-            <option value="post" selected>Нова пошта</option>
-            <option value="self">Самовивіз</option>
-        </select><br>
-        <label for="address">Адреса</label><br>
-        <input id="address" list="addresses" name="address" placeholder="Населений пункт" autocomplete="nope">
-        <datalist id="addresses">
-            <option value="Київ"></option>
-            <option value="Харків"></option>
-            <option value="Полтава"></option>
-        </datalist>
-        <br>
-        <label for="number">Номер/відділення складу Нової Пошти</label><br>
-        <input type="number" name="number" min="1" step="1" id="number"/><br>
-        <input type="checkbox" id="check" name="check" value="yes">
-        <label for="check">Створити профіль?</label><br>
+          method="post" target="_blank" class="order_form" id="order_form">
+        <div class="order-delivery">
+            <div class="person-wrapper">
+                <div class="text-grey">Ви постійний покупець?
+                    <a href="#"><span class="login_main">Щоб увійти, клацність сюди</span></a>
+                </div>
+                <div class="coupon"><img src="alert-2.png" alt="alert" class="coupon-image">
+                    <div class="coupon-text">Є КУПОН?
+                        <a href="#">
+                            <span class="coupon-link">НАТИСНІТЬ ТУТ, ЩОБ ВВЕСТИ КОД</span></a>
+                    </div>
+                </div>
+            </div>
+            <h2>Оплата і Доставка</h2>
+            <div class="input-fields">
+                <div class="flex-row">
+                    <div class="col-2">
+                        <label for="firstname">Ім'я<span title="обов'язкове поле">*</span></label>
+                        <input type="text" id="firstname" name="firstname"
+                               required maxlength="20" autofocus autocomplete="off">
+                    </div>
+                    <div class="col-2">
+                        <label for="lastname">Прізвище<span title="обов'язкове поле">*</span></label>
+                        <input type="text" id="lastname" name="lastname"
+                               required maxlength="20" autocomplete="nope">
+                    </div>
+                </div>
+                <div class="flex-row">
+                    <label for="company">Компанія (організація)</label>
+                    <input type="text" size="49" id="company" name="company" autocomplete="off">
+                </div>
+                <div class="flex-row">
+                    <label for="email">E-mail<span title="обов'язкове поле">*</span></label>
+                    <input type="email" name="email" id="email" required autocomplete="on">
+                </div>
+                <div class="flex-row">
+                    <label for="phone">Телефон<span title="обов'язкове поле">*</span></label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required autocomplete="on">
+                </div>
+                <div class="flex-row">
+                    <label for="delivery_type">Спосіб доставки<span title="обов'язкове поле">*</span></label>
+                    <select name="delivery_type" id="delivery_type" required>
+                        <option value="post" selected>Нова пошта</option>
+                        <option value="self">Самовивіз</option>
+                    </select>
+                </div>
+                <div class="flex-row">
+                    <label for="address">Адреса</label>
+                    <input id="address" list="addresses" name="address" placeholder="Населений пункт"
+                           autocomplete="off">
+                    <datalist id="addresses">
+                        <option value="Київ"></option>
+                        <option value="Харків"></option>
+                        <option value="Полтава"></option>
+                    </datalist>
+                </div>
+                <div class="flex-row">
+                    <label for="number">Номер/відділення складу Нової Пошти</label>
+                    <br>
+                    <input type="number" name="number" min="1" step="1" id="number"/>
+                </div>
+                <div class="flex-row">
+                    <input type="checkbox" id="check" name="check" value="yes">
+                    <label for="check">Створити профіль?</label>
+                </div>
+            </div>
+            <hr>
+        </div>
 
-        <hr>
-
-        <h2 id="order">Ваше замовлення</h2>
-        <table>
-            <thead>
-            <tr>
-                <th>Товар</th>
-                <th>Всього</th>
-            </tr>
-            </thead>
-            <tfoot>
-            <td>Сума замовлення</td>
-            <td>530 грн.</td>
-            </tfoot>
-            <tbody>
-            <tr>
-                <td>Бірманські будні &#215; 1</td>
-                <td>150 грн.</td>
-            </tr>
-            <tr>
-                <td>Хрестоносці &#215; 1</td>
-                <td>230 грн.</td>
-            </tr>
-            <tr>
-                <td>Бірманські будні &#215; 1</td>
-                <td>150 грн.</td>
-            </tr>
-            <tr>
-                <td>Підсумок</td>
+        <div class="order-summary">
+            <h2 id="order">Ваше замовлення</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Товар</th>
+                    <th>Всього</th>
+                </tr>
+                </thead>
+                <tfoot>
+                <td>Сума замовлення</td>
                 <td>530 грн.</td>
-            </tr>
-            </tbody>
+                </tfoot>
+                <tbody>
+                <tr>
+                    <td>Бірманські будні &#215; 1</td>
+                    <td>150 грн.</td>
+                </tr>
+                <tr>
+                    <td>Хрестоносці &#215; 1</td>
+                    <td>230 грн.</td>
+                </tr>
+                <tr>
+                    <td>Бірманські будні &#215; 1</td>
+                    <td>150 грн.</td>
+                </tr>
+                <tr>
+                    <td>Підсумок</td>
+                    <td>530 грн.</td>
+                </tr>
+                </tbody>
 
-        </table>
-        <input type="radio" id="afterpayment" name="payment" value="afterpayment">
-        <label for="afterpayment">Післяоплата</label><br>
-        <p>Оплата на пошті при отриманні замовлення</p><br>
-        <input type="radio" id="card" name="payment" value="card">
-        <label for="card">Оплата кредитною картою</label><br>
-        <input type="submit" value="ОФОРМИТИ ЗАМОВЛЕННЯ">
+            </table>
+            <input type="radio" id="afterpayment" name="payment" value="afterpayment">
+            <label for="afterpayment">Післяоплата</label>
+            <br>
+            <p>Оплата на пошті при отриманні замовлення</p><br>
+            <input type="radio" id="card" name="payment" value="card">
+            <label for="card">Оплата кредитною картою</label>
+            <br>
+            <input type="submit" value="ОФОРМИТИ ЗАМОВЛЕННЯ">
+        </div>
     </form>
 </main>
 
@@ -138,11 +261,23 @@
 </body>
 
 <footer>
-    <p>&#169; 2016-2021, Видавництво Жупанського</p>
-    <p><a href="https://publisher.in.ua/vidshkoduvannya-ta-povernennya/">Політика відшкодування та повернення</a></p>
-    <p><a href="https://www.facebook.com/zhupansky.publisher">Facebook-спільнота</a></p>
-    <p><a href="https://kolodiy.info/ua/">Розробка сайту</a> - Kolodiy info</p>
-    <a href="https://"><img src="zs_banner.gif" alt="banner west east"></a>
+    <div class="publishing-house"><p>&#169; 2016-2021, Видавництво Жупанського</p>
+        <p>
+            <a href="https://publisher.in.ua/vidshkoduvannya-ta-povernennya/">Політика відшкодування та повернення</a>
+        </p>
+    </div>
+    <div class="outside-links">
+        <p><i class="fab fa-facebook"></i>
+            <a href="https://www.facebook.com/zhupansky.publisher">Facebook-спільнота</a>
+        </p>
+        <p>
+            <a href="https://kolodiy.info/ua/">Розробка сайту</a>
+            - Kolodiy info
+        </p>
+    </div>
+    <div class="west-east">
+        <a href="https://"><img src="zs_banner.gif" alt="banner west east"></a>
+    </div>
 </footer>
 
 </html>
