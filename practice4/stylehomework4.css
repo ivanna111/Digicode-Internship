@@ -1,45 +1,53 @@
-body, html {
+body{
     height: 100%;
-    margin: 0;
+    margin: 0 3%;
     padding: 0;
     font-family: Garamond, sans-serif;
+    overflow-x: hidden;
+
 }
 
-#login_header {
+.login-header {
     background-color: rgb(235, 235, 235);
     color: black;
     width: 100%;
     text-align: right;
+    height: 35px;
 }
 
-#login_header > a {
+.login-header:before {
+    content:"";
+    background-color: rgb(235, 235, 235);
+    position: absolute;
+    height: 35px;
+    width: 4000px;
+    left: -2000px;
+    z-index: -1;
+}
+
+.login-link {
     text-decoration: none;
     font-size: 0.75em;
     padding: 5px;
 }
 
-#login_header > a:active {
+.login-link:active, .login-link:link, .login-link:visited {
     color: black;
 }
 
-#login_header > a:link {
-    color: black;
-}
-
-#login_header > a:visited {
-    color: black;
-}
-
-#login_header > a:hover {
+.login-link:hover {
     color: red;
     text-decoration: underline;
+}
+
+.login-link-wrapper {
+    padding: 8px 0;
 }
 
 .box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
 }
 
 .search-box {
@@ -61,10 +69,6 @@ body, html {
     vertical-align: bottom;
 }
 
-#cart > a:hover {
-    color: red;
-}
-
 .fa-shopping-bag, .basket-amount {
     color: black;
 }
@@ -73,29 +77,42 @@ body, html {
     color: red;
 }
 
-#cart > a {
+.cart > a:hover {
+    color: red;
+}
+
+.cart > a {
     text-decoration: none;
 }
 
-#cart > a:active, a:visited, a:link {
+.cart > a:active, a:visited, a:link {
     color: black;
     text-decoration: none;
 }
 
 .menu {
     background-color: rgb(61, 61, 61);
+    text-align: center;
+}
 
+.menu:before {
+    content:"";
+    background-color: rgb(61, 61, 61);
+    position: absolute;
+    height: 43px;
+    width: 4000px;
+    left: -2000px;
+    z-index: -1;
 }
 
 .menu ul {
-    padding: 0;
     margin: 0;
     list-style: none;
     position: relative;
+    padding: 0;
 }
 
 .menu ul li {
-    margin: 0px -7px 0 0;
     display: inline-block;
 }
 
@@ -103,8 +120,8 @@ body, html {
     display: block;
     color: white;
     text-decoration: none;
-    font-size: 10px;
-    padding: 18px 8px;
+    font-size: 13px;
+    padding: 14px 8px;
 }
 
 .menu > ul > li > a:hover {
@@ -114,20 +131,22 @@ body, html {
     text-shadow: 1px 1px 2px black;
 }
 
-.menu ul ul {
-    display: none;
+.menu > ul > li > ul {
+    visibility: hidden;
     position: absolute;
-    top: 100%;
+    text-align: left;
     font-size: 10px;
-    padding: 10px 10px;
     background-color: white;
-    opacity: inherit;
+    opacity: 0;
+    margin-left: 0;
+    border: 1px solid gray;
 
 }
 
 .menu ul ul li a {
     color: black;
     border: 1px rgb(235, 235, 235);
+    padding: 14px 20px;
 }
 
 .menu ul ul li a:hover {
@@ -138,24 +157,37 @@ body, html {
 
 }
 
-.menu ul li:hover > ul {
-    display: inherit;
+.menu > ul > li:hover > ul {
+    opacity: 1;
+    /*top: 65px;*/
+    visibility: visible;
 }
 
-.menu ul ul li {
-    min-width: 170px;
+.menu > ul > li > ul > li {
+    width: 400px;
     float: none;
     display: list-item;
     position: relative;
+    border-bottom: 1px solid gray;
 }
 
 .line {
     display: none;
 }
 
-input {
+.input-fields label {
+    margin: 15px 0 5px 0;
+    color: rgb(111, 116, 120);
+}
+
+.input-fields input {
     background-color: rgb(235, 235, 235);
     border: none;
+    height: 25px;
+}
+
+.input-fields select {
+    height: 30px;
 }
 
 .order_form {
@@ -169,19 +201,83 @@ input {
     outline: none !important;
 }
 
-main {
-    padding: 0 30px;
-    display: flex;
-}
-
 .order-delivery, .order-summary {
     flex: 50%;
-    padding: 15px;
+}
+
+.order-delivery {
+    margin: 25px 20px 0 0;
+}
+
+.delivery_type {
+    color: rgb(111, 116, 120);
 }
 
 .order-summary {
     background-color: rgb(235, 235, 235);
-    margin-top: 100px;
+    margin: 140px 0 0 0;
+    padding: 30px;
+}
+
+.order-summary-title {
+    margin-top: 0;
+}
+
+.summary-table {
+    font-size: 15px;
+    width: 100%;
+    border-collapse: collapse;
+    color: rgb(111, 116, 120)
+}
+
+.summary-table tr {
+    border-bottom: 1px solid gray;
+}
+
+.summary-table td, .summary-table thead th {
+    padding: 20px 10px;
+}
+
+.summary-table td:first-child, .summary-table th:first-child {
+    text-align: left;
+}
+
+.summary-table td:last-child, .summary-table th:last-child {
+    text-align: right;
+}
+
+.summary-table tr:last-child {
+    font-weight: bold;
+}
+
+.summary-table tfoot tr {
+    font-size: 18px;
+    border-bottom: none;
+    color: black;
+}
+.summary-table tfoot tr td {
+    padding-bottom: 0;
+}
+
+.order-summary-price {
+    font-size: 25px;
+}
+
+.payment-type-comment {
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.order-summary-payment-type input {
+    margin-top: 30px;
+}
+
+.order-summary .submit-order {
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 10px;
+    display: block;
 }
 
 .person-wrapper {
@@ -192,9 +288,8 @@ main {
     display: flex;
     color: white;
     background-color: rgb(238, 59, 59);
-    padding: 15px;
-    font-size: 10px;
-    width: 350px;
+    padding: 16px;
+    font-size: 15px;
 }
 
 .coupon-link {
@@ -216,13 +311,17 @@ main {
 }
 
 .coupon-text {
-    padding: 11px;
+    padding: 8px;
 }
 
-.text-grey {
+.payment-delivery {
+    margin: 30px 0 5px 0;
+}
+
+.regular-client-text {
     color: rgb(111, 116, 120);
-    font-size: 12px;
-    padding-bottom: 8px;
+    font-size: 15px;
+    padding-bottom: 15px;
 }
 
 .login_main:hover {
@@ -232,20 +331,53 @@ main {
 
 .flex-row {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
+    width: 100%;
 }
 
+.flex-column {
+    display: block;
+    flex-direction: column;
+    margin: 20px 0 40px;
+}
+.flex-column input {
+    height: auto;
+    margin: 0;
+    vertical-align: center;
+}
+
+.double-column {
+    display: flex;
+    flex-direction: row;
+}
+
+.label-input-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.label-input-wrap.half-size {
+    width: 50%;
+}
+
+.double-column .half-size:first-child {
+    margin-right: 30px;
+}
+
+.input-fields span {
+    color: red;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
 
 .order_form input {
     padding: 5px;
 }
 
-#delivery_type {
-    width: 378px;
-}
-
-#address {
-    width: 369px;
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
 }
 
 .menu-button {
@@ -261,16 +393,29 @@ main {
     color: lightgrey;
 }
 
-p {
-    padding: 0 48px;
+.rules-text {
+    margin-bottom: 50px;
 }
 
 footer {
-    color: (235, 235, 235);
+    color: gray;
     background-color: rgb(61, 61, 61);
     width: 100%;
-    display: inline-flex;
-    justify-content: space-around;
+    display: flex;
+    justify-content: space-between;
+}
+footer:before {
+    content:"";
+    background-color: rgb(61, 61, 61);
+    position: absolute;
+    height: 84px;
+    width: 4000px;
+    left: -2000px;
+    z-index: -1;
+}
+
+footer a:link {
+    color: gray;
 }
 
 footer a:hover {
@@ -278,9 +423,18 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.west-east {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.outside-links {
+    text-align: end;
+}
+
 /*margin: 30px 15px 0 0;*/
 /*margin: 5px 15px 0 0;*/
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 980px) {
     .menu-button {
         display: block;
     }

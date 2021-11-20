@@ -12,8 +12,11 @@
 </head>
 <body>
 <header>
-    <div id="login_header"><i class="fas fa-sign-in-alt"></i>
-        <a href="#">УВІЙТИ</a>
+    <div class="login-header">
+        <div class="login-link-wrapper">
+            <i class="fas fa-sign-in-alt"></i>
+            <a href="#" class="login-link">УВІЙТИ</a>
+        </div>
     </div>
     <div class="box">
         <div id="search">
@@ -31,7 +34,7 @@
             <a href="https://publisher.in.ua/"><img src="logo.jpg" alt="logo"></a>
         </div>
 
-        <div id="cart">
+        <div class="cart">
             <a href="#"><i class="fas fa-shopping-bag"></i>
                 <span class="basket"> Кошик:</span><span class="basket-amount"> 3 товари</span> <span
                         class="money">530 грн.</span></a>
@@ -124,7 +127,7 @@
             <li>
                 <a href="#">ІНФОРМАЦІЯ ДЛЯ ЗАМОВЛЕНЬ</a>
             </li>
-            <ul>
+        </ul>
     </nav>
     <div class="line">
         <hr>
@@ -136,7 +139,7 @@
           method="post" target="_blank" class="order_form" id="order_form">
         <div class="order-delivery">
             <div class="person-wrapper">
-                <div class="text-grey">Ви постійний покупець?
+                <div class="regular-client-text">Ви постійний покупець?
                     <a href="#"><span class="login_main">Щоб увійти, клацність сюди</span></a>
                 </div>
                 <div class="coupon"><img src="alert-2.png" alt="alert" class="coupon-image">
@@ -146,65 +149,78 @@
                     </div>
                 </div>
             </div>
-            <h2>Оплата і Доставка</h2>
+            <h2 class="payment-delivery">Оплата і Доставка</h2>
             <div class="input-fields">
                 <div class="flex-row">
-                    <div class="col-2">
-                        <label for="firstname">Ім'я<span title="обов'язкове поле">*</span></label>
-                        <input type="text" id="firstname" name="firstname"
-                               required maxlength="20" autofocus autocomplete="off">
+                    <div class="double-column">
+                        <div class="label-input-wrap half-size">
+                            <label for="firstname">Ім'я <span title="обов'язкове поле">*</span></label>
+                            <input type="text" id="firstname" name="firstname"
+                                   required maxlength="20" autofocus autocomplete="off">
+                        </div>
+                        <div class="label-input-wrap half-size">
+                            <label for="lastname">Прізвище <span title="обов'язкове поле">*</span></label>
+                            <input type="text" id="lastname" name="lastname"
+                                   required maxlength="20" autocomplete="nope">
+                        </div>
                     </div>
-                    <div class="col-2">
-                        <label for="lastname">Прізвище<span title="обов'язкове поле">*</span></label>
-                        <input type="text" id="lastname" name="lastname"
-                               required maxlength="20" autocomplete="nope">
+                </div>
+                <div class="flex-row">
+                    <div class="label-input-wrap">
+                        <label for="company">Компанія (організація)</label>
+                        <input type="text" size="49" id="company" name="company" autocomplete="off">
                     </div>
                 </div>
                 <div class="flex-row">
-                    <label for="company">Компанія (організація)</label>
-                    <input type="text" size="49" id="company" name="company" autocomplete="off">
-                </div>
-                <div class="flex-row">
-                    <label for="email">E-mail<span title="обов'язкове поле">*</span></label>
-                    <input type="email" name="email" id="email" required autocomplete="on">
-                </div>
-                <div class="flex-row">
-                    <label for="phone">Телефон<span title="обов'язкове поле">*</span></label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required autocomplete="on">
-                </div>
-                <div class="flex-row">
-                    <label for="delivery_type">Спосіб доставки<span title="обов'язкове поле">*</span></label>
-                    <select name="delivery_type" id="delivery_type" required>
-                        <option value="post" selected>Нова пошта</option>
-                        <option value="self">Самовивіз</option>
-                    </select>
-                </div>
-                <div class="flex-row">
-                    <label for="address">Адреса</label>
-                    <input id="address" list="addresses" name="address" placeholder="Населений пункт"
-                           autocomplete="off">
-                    <datalist id="addresses">
-                        <option value="Київ"></option>
-                        <option value="Харків"></option>
-                        <option value="Полтава"></option>
-                    </datalist>
-                </div>
-                <div class="flex-row">
-                    <label for="number">Номер/відділення складу Нової Пошти</label>
-                    <br>
-                    <input type="number" name="number" min="1" step="1" id="number"/>
-                </div>
-                <div class="flex-row">
-                    <input type="checkbox" id="check" name="check" value="yes">
-                    <label for="check">Створити профіль?</label>
-                </div>
-            </div>
-            <hr>
-        </div>
 
+                    <div class="double-column">
+                        <div class="label-input-wrap half-size">
+                            <label for="email">E-mail <span title="обов'язкове поле">*</span></label>
+                            <input type="email" name="email" id="email" required autocomplete="on">
+                        </div>
+                        <div class="label-input-wrap half-size">
+                            <label for="phone">Телефон <span title="обов'язкове поле">*</span></label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required autocomplete="on">
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="label-input-wrap">
+                            <label for="delivery_type">Спосіб доставки <span title="обов'язкове поле">*</span></label>
+                            <select name="delivery_type" id="delivery_type" required>
+                                <option value="post" selected>Нова пошта</option>
+                                <option value="self">Самовивіз</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="label-input-wrap">
+                            <label for="address">Адреса</label>
+                            <input id="address" list="addresses" name="address" placeholder="Населений пункт"
+                                   autocomplete="off">
+                            <datalist id="addresses">
+                                <option value="Київ"></option>
+                                <option value="Харків"></option>
+                                <option value="Полтава"></option>
+                            </datalist>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="label-input-wrap">
+                            <label for="number">Номер/відділення складу Нової Пошти</label>
+                            <input type="number" name="number" min="1" step="1" id="number"/>
+                        </div>
+                    </div>
+                    <div class="flex-column">
+                        <input type="checkbox" id="check" name="check" value="yes">
+                        <label for="check" class="label-right">Створити профіль?</label>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
         <div class="order-summary">
-            <h2 id="order">Ваше замовлення</h2>
-            <table>
+            <h2 class="order-summary-title">Ваше замовлення</h2>
+            <table class="summary-table">
                 <thead>
                 <tr>
                     <th>Товар</th>
@@ -213,7 +229,7 @@
                 </thead>
                 <tfoot>
                 <td>Сума замовлення</td>
-                <td>530 грн.</td>
+                <td class="order-summary-price">530 грн.</td>
                 </tfoot>
                 <tbody>
                 <tr>
@@ -235,28 +251,31 @@
                 </tbody>
 
             </table>
-            <input type="radio" id="afterpayment" name="payment" value="afterpayment">
-            <label for="afterpayment">Післяоплата</label>
-            <br>
-            <p>Оплата на пошті при отриманні замовлення</p><br>
-            <input type="radio" id="card" name="payment" value="card">
-            <label for="card">Оплата кредитною картою</label>
-            <br>
-            <input type="submit" value="ОФОРМИТИ ЗАМОВЛЕННЯ">
+            <div class="order-summary-payment-type">
+                <input type="radio" id="after-payment" name="payment" value="after-payment">
+                <label for="after-payment">Післяоплата</label>
+                <p class="payment-type-comment">Оплата на пошті при отриманні замовлення</p>
+                <input type="radio" id="card" name="payment" value="card">
+                <label for="card">Оплата кредитною картою</label>
+                <input type="submit" class="submit-order" value="ОФОРМИТИ ЗАМОВЛЕННЯ">
+            </div>
         </div>
     </form>
+    <div class="rules-text">
+        <p>
+            Термін виконання замовлення - до 10 робочих днів.<br>
+            Вартість поштових послуг сплачується на поштовому відділенні при отриманні замовлення.<br><br>
+            * УВАГА! Просимо враховувати, що за послугу післяплати поштові оператори стягують додаткову комісію:
+            наприклад, вартість даної послуги &#171;Нової поштит&#187; з опцією оплати при отриманні замовлення у
+            відділенні
+            становить 20 грн + 2% від суми грошового переказу.<br><br>
+            Після надходження на відділення Нової пошти, замовлення зберігається там три дні.
+            Якщо клієнт протягом цього часу його не забирає, замовлення автоматично повертається на склад виробництва.
+            Повторне надсилання замовлення можливе лише за умови сплати додаткової вартості кур'єрських послуг.
+        </p>
+    </div>
 </main>
 
-<p>
-    Термін виконання замовлення - до 10 робочих днів.<br>
-    Вартість поштових послуг сплачується на поштовому відділенні при отриманні замовлення.<br><br>
-    * УВАГА! Просимо враховувати, що за послугу післяплати поштові оператори стягують додаткову комісію:
-    наприклад, вартість даної послуги &#171;Нової поштит&#187; з опцією оплати при отриманні замовлення у відділенні
-    становить 20 грн + 2% від суми грошового переказу.<br><br>
-    Після надходження на відділення Нової пошти, замовлення зберігається там три дні.
-    Якщо клієнт протягом цього часу його не забирає, замовлення автоматично повертається на склад виробництва.
-    Повторне надсилання замовлення можливе лише за умови сплати додаткової вартості кур'єрських послуг.
-</p>
 
 </body>
 
