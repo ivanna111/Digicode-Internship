@@ -1,4 +1,4 @@
-body{
+body {
     height: 100%;
     margin: 0 3%;
     padding: 0;
@@ -16,7 +16,7 @@ body{
 }
 
 .login-header:before {
-    content:"";
+    content: "";
     background-color: rgb(235, 235, 235);
     position: absolute;
     height: 35px;
@@ -96,7 +96,7 @@ body{
 }
 
 .menu:before {
-    content:"";
+    content: "";
     background-color: rgb(61, 61, 61);
     position: absolute;
     height: 43px;
@@ -120,7 +120,7 @@ body{
     display: block;
     color: white;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 10px;
     padding: 14px 8px;
 }
 
@@ -196,8 +196,7 @@ body{
 }
 
 .order_form input:focus {
-    border: 1px solid;
-    border-color: red;
+    border: 1px solid red;
     outline: none !important;
 }
 
@@ -255,6 +254,7 @@ body{
     border-bottom: none;
     color: black;
 }
+
 .summary-table tfoot tr td {
     padding-bottom: 0;
 }
@@ -280,6 +280,11 @@ body{
     display: block;
 }
 
+.order-summary .submit-order:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .person-wrapper {
     height: 100px;
 }
@@ -289,7 +294,7 @@ body{
     color: white;
     background-color: rgb(238, 59, 59);
     padding: 16px;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .coupon-link {
@@ -340,6 +345,7 @@ body{
     flex-direction: column;
     margin: 20px 0 40px;
 }
+
 .flex-column input {
     height: auto;
     margin: 0;
@@ -381,17 +387,16 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .menu-button {
-    padding: 8px;
-    margin-top: 8px;
     color: lightgrey;
     background-color: white;
     border: none;
     display: none;
 }
 
-.menu-button:active {
-    color: lightgrey;
+.fa-bars {
+    color: rgba(134, 134, 134, 0.63);
 }
+
 
 .rules-text {
     margin-bottom: 50px;
@@ -404,8 +409,9 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+
 footer:before {
-    content:"";
+    content: "";
     background-color: rgb(61, 61, 61);
     position: absolute;
     height: 84px;
@@ -415,6 +421,11 @@ footer:before {
 }
 
 footer a:link {
+    color: gray;
+}
+
+
+footer a:active, footer a:visited {
     color: gray;
 }
 
@@ -432,9 +443,20 @@ footer a:hover {
     text-align: end;
 }
 
-/*margin: 30px 15px 0 0;*/
-/*margin: 5px 15px 0 0;*/
-@media screen and (max-width: 980px) {
+.black {
+    color: black;
+}
+
+.login-header-tablet, .action-icons {
+    display: none;
+}
+
+.except {
+    display: none;
+}
+
+
+@media screen and (max-width: 1000px) {
     .menu-button {
         display: block;
     }
@@ -451,7 +473,7 @@ footer a:hover {
         color: lightgrey;
     }
 
-    #search {
+    .search {
         display: none;
     }
 
@@ -460,11 +482,115 @@ footer a:hover {
         color: rgb(235, 235, 235);
     }
 
+
 }
 
 @media screen and (max-width: 780px) {
+    .order-delivery {
+        margin: 25px 0 0 0;
+    }
+
+    .order-summary {
+        margin: 0;
+    }
 
     .order_form {
         display: block;
+    }
+
+    .login-header-tablet {
+        display: block;
+    }
+
+    .login-header {
+        display: none;
+    }
+
+    .box > .cart {
+        display: none;
+    }
+
+    .login-header-tablet {
+        background-color: rgb(235, 235, 235);
+        width: 100%;
+        text-align: right;
+        height: 35px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .login-header-tablet > .cart {
+        padding: 8px 0;
+    }
+
+    .fa-user {
+        padding: 8px 8px 8px 0;
+    }
+
+    .fa-search {
+        padding: 8px 0 8px 8px;
+    }
+
+
+    .login-header-tablet:before {
+        content: "";
+        background-color: rgb(235, 235, 235);
+        position: absolute;
+        height: 35px;
+        width: 4000px;
+        left: -2000px;
+        z-index: -1;
+    }
+
+    .action-icons {
+        display: inherit;
+        color: grey;
+    }
+
+    .except {
+        display: block;
+    }
+
+    .login-header-tablet .except {
+        width: 46px;
+    }
+
+    .box .except {
+        width: 33px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer:before {
+        content: "";
+        background-color: rgb(61, 61, 61);
+        position: absolute;
+        height: 152px;
+        width: 4000px;
+        left: -2000px;
+        z-index: -1;
+    }
+
+    footer p {
+        margin: 0;
+        padding: 5px 0;
+    }
+
+    .outside-links {
+        text-align: left;
+    }
+
+    .publishing-house {
+        margin-top: 5px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .login-header-tablet .except {
+        display: none;
     }
 }
